@@ -30,4 +30,9 @@
       <Filter>Ressourcendateien</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\concept.png">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

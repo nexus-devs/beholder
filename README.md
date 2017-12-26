@@ -5,7 +5,7 @@
 <br>
 
 ## Concepts
-```json
+```js
 // All scenes
 scenes: [
 	// Single scene object
@@ -30,7 +30,7 @@ scenes: [
 		objects: [
 			// Single children object
 			{
-				name: 'item'				// Name of the object
+				name: 'item',				// Name of the object
 				area: [50, 50, 300, 100],	// Template area to match in the scenes screenshot
 				conditions: [],	// Conditions to meet
 

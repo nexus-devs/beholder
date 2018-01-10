@@ -5,6 +5,13 @@
 <br>
 
 ## Concepts
+OK NEW CONCEPT MY DUDES:
+* Feature Match
+* If distance is high enough, template exists
+* Template match
+* Template match with scaling
+* MASK ALGORITHM
+
 Extremly professional concept art
 ![concept](/concept.png)
 

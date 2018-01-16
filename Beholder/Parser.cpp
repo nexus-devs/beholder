@@ -5,14 +5,14 @@
 Parser::Parser(std::string sFileName) {
 
     // Read json file
-    std::ifstream file(sFileName);
-    if (file.fail()) {
+    std::ifstream fFile(sFileName);
+    if (fFile.fail()) {
         std::cerr << "Parsing error while opening file";
         return;
     }
 
     // Serialize
-    file >> jConfig;
+    fFile >> jConfig;
 
-    file.close();
+    fFile.close();
 }

@@ -3,7 +3,7 @@
 
 
 // Default constructor
-Parser::Parser(const char* sFileName) {
+Parser::Parser(std::string sFileName) {
 
     // Read json file
     std::ifstream file(sFileName);

@@ -10,7 +10,7 @@ using json = nlohmann::json;
 // Class for parsing Beholder config files
 class Parser {
     public:
-        Parser(const char* sFilePath);
+        Parser(std::string sFileName);
 
     private:
         json jConfig;

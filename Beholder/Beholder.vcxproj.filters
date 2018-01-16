@@ -41,4 +41,9 @@
       <Filter>Ressourcendateien</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Parser.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

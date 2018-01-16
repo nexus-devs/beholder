@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="catch.hpp" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="stdafx.h" />

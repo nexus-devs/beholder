@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Quelldateien\Tests">
+      <UniqueIdentifier>{fa9b01d0-dfdb-448f-b6b7-f64715a36cbe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -25,6 +28,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Parser.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="catch.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

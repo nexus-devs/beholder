@@ -7,7 +7,7 @@ Parser::Parser(std::string sFileName) {
     // Read json file
     std::ifstream file(sFileName);
     if (file.fail()) {
-        std::cerr << "Parsing error while opening file: " << strerror(errno);
+        std::cerr << "Parsing error while opening file";
         return;
     }
 

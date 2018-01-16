@@ -2,6 +2,7 @@
 
 #include "stdafx.h"
 #include "json.hpp"
+#include <fstream>
 
 
 // Namespaces

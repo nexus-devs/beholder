@@ -5,7 +5,6 @@
 #include <fstream>
 
 
-// Namespaces
 using json = nlohmann::json;
 
 // Class for parsing Beholder config files

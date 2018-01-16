@@ -14,6 +14,5 @@ Parser::Parser(std::string sFileName) {
     // Serialize
     file >> jConfig;
 
-    // Close file
     file.close();
 }

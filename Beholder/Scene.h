@@ -8,6 +8,5 @@ class Scene {
     public:
         Scene(std::string sSceneName);
 
-    private:
-        std::string sName;
+        std::string sName;      
 };

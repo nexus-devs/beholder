@@ -25,6 +25,11 @@ Scene Parser::ConstructScene(json jSceneObj) {
     std::string sSceneName = jSceneObj["name"];
     Scene hScene(sSceneName);
 
+    // Add actor objects to scene
+    for (json::iterator it = jSceneObj.begin(); it != jSceneObj.end(); ++it) {
+        hScene.vActors.push_back(ConstructActor(*it));
+    }
+
     return hScene;
 }
 

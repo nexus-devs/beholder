@@ -17,6 +17,10 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
 
         // Test for proper construction
         json jSampleScene = { {"name", "sample_scene"} };
+        jSampleScene["actors"] = json::array();
+        jSampleScene["actors"].push_back({ { "name", "test_actor" } });
+        jSampleScene["actors"].push_back({ { "name", "test_actor2" } });
+
         Scene hScene = hParser.ConstructScene(jSampleScene);
 
         REQUIRE_NOTHROW(hScene);

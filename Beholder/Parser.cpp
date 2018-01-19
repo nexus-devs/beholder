@@ -26,7 +26,8 @@ Scene Parser::ConstructScene(json jSceneObj) {
     Scene hScene(sSceneName);
 
     // Add actor objects to scene
-    for (json::iterator it = jSceneObj.begin(); it != jSceneObj.end(); ++it) {
+    json jActorArray = jSceneObj["actors"];
+    for (json::iterator it = jActorArray.begin(); it != jActorArray.end(); ++it) {
         hScene.vActors.push_back(ConstructActor(*it));
     }
 

@@ -12,5 +12,6 @@ class Parser {
     public:
         Parser(std::string sFileName);
 
+    private:
         json jConfig;
 };

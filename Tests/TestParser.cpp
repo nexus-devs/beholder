@@ -19,6 +19,7 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
         Scene hScene = hParser.ConstructScene(jSampleScene);
 
         REQUIRE_NOTHROW(hScene);
+        REQUIRE(hScene.sName == "sample_scene");
 
         // Test for correct error handling
         json jNotSceneObj = false;

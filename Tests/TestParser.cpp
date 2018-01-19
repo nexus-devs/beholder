@@ -28,4 +28,20 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
         REQUIRE_THROWS_AS(hParser.ConstructScene(jNotSceneObj), std::invalid_argument);
         REQUIRE_THROWS_AS(hParser.ConstructScene(jNoNameFieldObj), json::type_error);
     }
+
+    SECTION("actors get properly constructed") {
+
+        // Test for proper construction
+        json jSampleActor = { { "name", "sample_actor" } };
+        Actor hActor = hParser.ConstructActor(jSampleActor);
+
+        REQUIRE_NOTHROW(hActor);
+        REQUIRE(hActor.sName == "sample_actor");
+
+        // Test for correct error handling
+        json jNotActorObj = false;
+        json jNoNameFieldObj = { { "test", "no" } };
+        REQUIRE_THROWS_AS(hParser.ConstructActor(jNotActorObj), std::invalid_argument);
+        REQUIRE_THROWS_AS(hParser.ConstructActor(jNoNameFieldObj), json::type_error);
+    }
 }

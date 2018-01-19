@@ -27,3 +27,17 @@ Scene Parser::ConstructScene(json jSceneObj) {
 
     return hScene;
 }
+
+
+// Constructs a single actor from a json object
+Actor Parser::ConstructActor(json jActorObj) {
+
+    // Check if its an actual object
+    if (!jActorObj.is_object()) throw std::invalid_argument("json value isn't an object");
+
+    // Construct actor object
+    std::string sActorName = jActorObj["name"];
+    Actor hActor(sActorName);
+
+    return hActor;
+}

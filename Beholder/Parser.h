@@ -13,6 +13,7 @@ class Parser {
     public:
         Parser(std::string sFileName);
         Scene ConstructScene(json jSceneObj);
+        Actor ConstructActor(json jActorObj);
 
     private:
         json jConfig;

@@ -10,6 +10,7 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
     Parser hParser(sTestFile);
 
     REQUIRE_NOTHROW(hParser);
+    REQUIRE_THROWS_AS(Parser("not_existing_file"), std::runtime_error);
 
 
     SECTION("scenes get properly constructed") {
@@ -23,6 +24,8 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
 
         // Test for correct error handling
         json jNotSceneObj = false;
-        REQUIRE_THROWS(hParser.ConstructScene(jNotSceneObj));
+        json jNoNameFieldObj = { {"test", "no"} };
+        REQUIRE_THROWS_AS(hParser.ConstructScene(jNotSceneObj), std::invalid_argument);
+        REQUIRE_THROWS_AS(hParser.ConstructScene(jNoNameFieldObj), json::type_error);
     }
 }

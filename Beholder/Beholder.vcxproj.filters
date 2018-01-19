@@ -13,22 +13,25 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headerdateien\includes">
+      <UniqueIdentifier>{7892f219-8f81-4ffb-9c37-4900515c6402}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="json.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Parser.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Headerdateien\includes</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Headerdateien\includes</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Headerdateien\includes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

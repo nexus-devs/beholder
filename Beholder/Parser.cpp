@@ -19,10 +19,11 @@ Parser::Parser(std::string sFileName) {
 Scene Parser::ConstructScene(json jSceneObj) {
 
     // Check if its an actual object
-    if (jSceneObj.is_object()) throw std::invalid_argument("json value isn't an object");
+    if (!jSceneObj.is_object()) throw std::invalid_argument("json value isn't an object");
 
     // Construct scene object
-    Scene hScene(jSceneObj["name"]);
+    std::string sSceneName = jSceneObj["name"];
+    Scene hScene(sSceneName);
 
     return hScene;
 }

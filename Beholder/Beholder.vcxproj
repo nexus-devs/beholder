@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Actor.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="Scene.h" />
@@ -161,6 +162,7 @@
     <Image Include="..\concept.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="Scene.cpp" />
   </ItemGroup>

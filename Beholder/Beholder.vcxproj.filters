@@ -33,6 +33,9 @@
     <ClInclude Include="targetver.h">
       <Filter>Headerdateien\includes</Filter>
     </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">
@@ -52,6 +55,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

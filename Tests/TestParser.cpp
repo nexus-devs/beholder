@@ -45,7 +45,11 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
         // Test for correct error handling
         json jNotActorObj = false;
         json jNoNameFieldObj = { { "test", "no" }, { "template", "no" } };
+        json jNoTemplateObj = { { "name", "no" } };
+        json jNoExistingTemplateObj = { { "name", "no" }, { "template", "doesntexist.jpg" } };
         REQUIRE_THROWS_AS(hParser.ConstructActor(jNotActorObj), std::invalid_argument);
         REQUIRE_THROWS_AS(hParser.ConstructActor(jNoNameFieldObj), json::type_error);
+        REQUIRE_THROWS_AS(hParser.ConstructActor(jNoTemplateObj), json::type_error);
+        REQUIRE_THROWS_AS(hParser.ConstructActor(jNoExistingTemplateObj), std::invalid_argument);
     }
 }

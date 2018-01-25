@@ -26,9 +26,11 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
         REQUIRE_NOTHROW(hScene);
         REQUIRE(hScene.sName == "sample_scene");
 
+
         // Test for correct error handling
         json jNotSceneObj = false;
         json jNoNameFieldObj = { {"test", "no"} };
+
         REQUIRE_THROWS_AS(hParser.ConstructScene(jNotSceneObj), std::invalid_argument);
         REQUIRE_THROWS_AS(hParser.ConstructScene(jNoNameFieldObj), json::type_error);
     }
@@ -42,12 +44,23 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
         REQUIRE_NOTHROW(hActor);
         REQUIRE(hActor.sName == "sample_actor");
         REQUIRE(!hActor.mTemplate.empty());
+        REQUIRE(hActor.mMask.empty());
+
+
+        // Test for optional params
+        jSampleActor.push_back({ "mask", "test_chat_mask.jpg" });
+        Actor hActorOpt = hParser.ConstructActor(jSampleActor);
+
+        REQUIRE_NOTHROW(hActorOpt);
+        REQUIRE(!hActorOpt.mMask.empty());
+
 
         // Test for correct error handling
         json jNotActorObj = false;
         json jNoNameFieldObj = { { "test", "no" }, { "template", "no" } };
         json jNoTemplateObj = { { "name", "no" } };
         json jNoExistingTemplateObj = { { "name", "no" }, { "template", "doesntexist.jpg" } };
+
         REQUIRE_THROWS_AS(hParser.ConstructActor(jNotActorObj), std::invalid_argument);
         REQUIRE_THROWS_AS(hParser.ConstructActor(jNoNameFieldObj), json::type_error);
         REQUIRE_THROWS_AS(hParser.ConstructActor(jNoTemplateObj), json::type_error);

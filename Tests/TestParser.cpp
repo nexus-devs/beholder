@@ -41,6 +41,7 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
 
         REQUIRE_NOTHROW(hActor);
         REQUIRE(hActor.sName == "sample_actor");
+        REQUIRE(!hActor.mTemplate.empty());
 
         // Test for correct error handling
         json jNotActorObj = false;

@@ -44,7 +44,9 @@ Actor Parser::ConstructActor(json jActorObj) {
     // Construct actor object
     std::string sActorName = jActorObj["name"];
     std::string sActorTemplate = jActorObj["template"];
-    Actor hActor(sActorName, sActorTemplate);
+    std::string sActorMask = jActorObj.value("mask", "");
+
+    Actor hActor(sActorName, sActorTemplate, sActorMask);
 
     return hActor;
 }

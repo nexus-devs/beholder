@@ -18,8 +18,8 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
         // Test for proper construction
         json jSampleScene = { {"name", "sample_scene"} };
         jSampleScene["actors"] = json::array();
-        jSampleScene["actors"].push_back({ { "name", "test_actor" } });
-        jSampleScene["actors"].push_back({ { "name", "test_actor2" } });
+        jSampleScene["actors"].push_back({ { "name", "test_actor" }, { "template", "test_chat.jpg" } });
+        jSampleScene["actors"].push_back({ { "name", "test_actor2" }, { "template", "test_chat.jpg" } });
 
         Scene hScene = hParser.ConstructScene(jSampleScene);
 
@@ -36,7 +36,7 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
     SECTION("actors get properly constructed") {
 
         // Test for proper construction
-        json jSampleActor = { { "name", "sample_actor" } };
+        json jSampleActor = { { "name", "sample_actor" }, { "template", "test_chat.jpg" } };
         Actor hActor = hParser.ConstructActor(jSampleActor);
 
         REQUIRE_NOTHROW(hActor);
@@ -44,7 +44,7 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
 
         // Test for correct error handling
         json jNotActorObj = false;
-        json jNoNameFieldObj = { { "test", "no" } };
+        json jNoNameFieldObj = { { "test", "no" }, { "template", "no" } };
         REQUIRE_THROWS_AS(hParser.ConstructActor(jNotActorObj), std::invalid_argument);
         REQUIRE_THROWS_AS(hParser.ConstructActor(jNoNameFieldObj), json::type_error);
     }

@@ -9,4 +9,6 @@ class Actor {
         Actor(std::string sActorName);
 
         std::string sName;
+        cv::Mat mTemplate;
+        cv::Mat mMask;
 };

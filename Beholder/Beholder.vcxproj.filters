@@ -36,6 +36,9 @@
     <ClInclude Include="Actor.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Injector.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">
@@ -58,6 +61,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Actor.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Injector.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

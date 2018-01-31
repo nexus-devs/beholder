@@ -14,6 +14,13 @@ TEST_CASE("window gets correctly injected", "[injector]") {
 
     REQUIRE(createdProcess);
 
+
+    SECTION("injection function works") {
+
+        REQUIRE_NOTHROW(Injector::Inject(GetProcessId(processInfo.hProcess), "../NexusScreen.dll"));
+    }
+
+
     // Cleanup
     TerminateProcess(processInfo.hProcess, 0);
     CloseHandle(processInfo.hProcess);

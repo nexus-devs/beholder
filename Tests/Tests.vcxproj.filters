@@ -26,12 +26,18 @@
     <ClCompile Include="TestParser.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="TestInjector.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="test.cfg">
       <Filter>Ressourcendateien</Filter>
     </None>
     <None Include="..\NexusScreen.dll">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="test_window.exe">
       <Filter>Ressourcendateien</Filter>
     </None>
   </ItemGroup>

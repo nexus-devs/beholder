@@ -153,6 +153,7 @@
     <ClInclude Include="catch.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TestInjector.cpp" />
     <ClCompile Include="TestParser.cpp" />
     <ClCompile Include="Tests.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -166,6 +167,7 @@
   <ItemGroup>
     <None Include="..\NexusScreen.dll" />
     <None Include="test.cfg" />
+    <None Include="test_window.exe" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="test_chat.jpg" />

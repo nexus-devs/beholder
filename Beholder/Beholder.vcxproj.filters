@@ -47,6 +47,9 @@
     <None Include="..\LICENSE.md">
       <Filter>Ressourcendateien</Filter>
     </None>
+    <None Include="..\NexusScreen.dll">
+      <Filter>Ressourcendateien</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\concept.png">

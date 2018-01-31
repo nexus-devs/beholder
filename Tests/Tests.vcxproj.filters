@@ -31,6 +31,9 @@
     <None Include="test.cfg">
       <Filter>Ressourcendateien</Filter>
     </None>
+    <None Include="..\NexusScreen.dll">
+      <Filter>Ressourcendateien</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="test_chat.jpg">

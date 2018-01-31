@@ -166,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\LICENSE.md" />
+    <None Include="..\NexusScreen.dll" />
     <None Include="..\README.md" />
   </ItemGroup>
   <ItemGroup>

@@ -157,6 +157,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="Core.h" />
     <ClInclude Include="Injector.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="Parser.h" />
@@ -174,6 +175,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="Core.cpp" />
     <ClCompile Include="Injector.cpp" />
     <ClCompile Include="Parser.cpp" />
     <ClCompile Include="Scene.cpp" />

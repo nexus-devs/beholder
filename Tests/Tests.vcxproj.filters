@@ -40,6 +40,9 @@
     <None Include="test_window.exe">
       <Filter>Ressourcendateien</Filter>
     </None>
+    <None Include="test_window64.exe">
+      <Filter>Ressourcendateien</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="test_chat.jpg">

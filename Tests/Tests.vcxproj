@@ -168,6 +168,7 @@
     <None Include="..\NexusScreen.dll" />
     <None Include="test.cfg" />
     <None Include="test_window.exe" />
+    <None Include="test_window64.exe" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="test_chat.jpg" />

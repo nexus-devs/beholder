@@ -41,5 +41,5 @@ void Injector::Inject(DWORD pId, std::string dllPath) {
 
 // Helper function for windows error throwing
 void Injector::ThrowWindowsRuntime(std::string sErrMsg) {
-    throw std::runtime_error(sErrMsg + ": " + std::to_string(GetLastError()));
+    throw std::runtime_error(sErrMsg + " [win error: " + std::to_string(GetLastError()) + "]");
 }

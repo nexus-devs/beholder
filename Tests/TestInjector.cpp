@@ -25,7 +25,7 @@ TEST_CASE("window gets correctly injected", "[injector]") {
     SECTION("injection function works") {
 
         REQUIRE_NOTHROW(Injector::Inject(GetProcessId(processInfo.hProcess), "../NexusScreen.dll"));
-        REQUIRE_THROWS_AS(Injector::Inject(GetProcessId(processInfo.hProcess), "../DoesntExist.dll"), std::runtime_error);
+        REQUIRE_THROWS_AS(Injector::Inject(GetProcessId(processInfo.hProcess), "../DoesntExist.dll"), std::invalid_argument);
         REQUIRE_THROWS_AS(Injector::Inject(GetProcessId(processInfo64.hProcess), "../NexusScreen.dll"), std::runtime_error);
     }
 
@@ -34,4 +34,7 @@ TEST_CASE("window gets correctly injected", "[injector]") {
     TerminateProcess(processInfo.hProcess, 0);
     CloseHandle(processInfo.hProcess);
     CloseHandle(processInfo.hThread);
+    TerminateProcess(processInfo64.hProcess, 0);
+    CloseHandle(processInfo64.hProcess);
+    CloseHandle(processInfo64.hThread);
 }

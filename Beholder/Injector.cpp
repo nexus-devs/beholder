@@ -7,6 +7,9 @@ void Injector::Inject(DWORD pId, std::string dllPath) {
     // Get const char version of std::string
     const char* cDllPath = dllPath.c_str();
 
+    std::ifstream sFileExistsStream(cDllPath);
+    if (!sFileExistsStream.good()) throw std::invalid_argument("file doesnt exist");
+
     HANDLE hWnd = OpenProcess(PROCESS_ALL_ACCESS, false, pId);
     if (!hWnd) ThrowWindowsRuntime("failed opening process");
 

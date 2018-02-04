@@ -8,7 +8,7 @@ TEST_CASE("core gets correctly initialized", "[core]") {
     // Open up test .exe
     STARTUPINFO info = { sizeof(info) };
     PROCESS_INFORMATION processInfo;
-    BOOL createdProcess = CreateProcess("test_window.exe", NULL, NULL, NULL, TRUE, 0, NULL, NULL, &info, &processInfo);
+    BOOL createdProcess = CreateProcess(sTestExe.c_str(), NULL, NULL, NULL, TRUE, 0, NULL, NULL, &info, &processInfo);
 
     REQUIRE(createdProcess);
 

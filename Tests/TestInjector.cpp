@@ -8,12 +8,12 @@ TEST_CASE("window gets correctly injected", "[injector]") {
     // Open up test .exe
     STARTUPINFO info = { sizeof(info) };
     PROCESS_INFORMATION processInfo;
-    BOOL createdProcess = CreateProcess("test_window.exe", NULL, NULL, NULL, TRUE, 0, NULL, NULL, &info, &processInfo);
+    BOOL createdProcess = CreateProcess(sTestExe.c_str(), NULL, NULL, NULL, TRUE, 0, NULL, NULL, &info, &processInfo);
 
     // Open up test .exe 64bit
     STARTUPINFO info64 = { sizeof(info64) };
     PROCESS_INFORMATION processInfo64;
-    BOOL createdProcess64 = CreateProcess("test_window64.exe", NULL, NULL, NULL, TRUE, 0, NULL, NULL, &info64, &processInfo64);
+    BOOL createdProcess64 = CreateProcess(sTestExe64.c_str(), NULL, NULL, NULL, TRUE, 0, NULL, NULL, &info64, &processInfo64);
 
     REQUIRE(createdProcess);
     REQUIRE(createdProcess64);

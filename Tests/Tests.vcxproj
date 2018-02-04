@@ -30,7 +30,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -153,6 +153,7 @@
     <ClInclude Include="catch.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="TestCore.cpp" />
     <ClCompile Include="TestInjector.cpp" />
     <ClCompile Include="TestParser.cpp" />
     <ClCompile Include="Tests.cpp">

@@ -7,7 +7,7 @@
 // Beholder core class
 class Core {
     public:
-        Core();
+        Core(std::string sWindowName, std::string sWindowClass = NULL);
 
     private:
         static std::string sNexusScreenPath;

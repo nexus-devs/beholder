@@ -9,7 +9,6 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
 
     Parser hParser(sTestFile);
 
-    REQUIRE_NOTHROW(hParser);
     REQUIRE_THROWS_AS(Parser("not_existing_file"), std::runtime_error);
 
 
@@ -23,7 +22,6 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
 
         Scene hScene = hParser.ConstructScene(jSampleScene);
 
-        REQUIRE_NOTHROW(hScene);
         REQUIRE(hScene.sName == "sample_scene");
 
 
@@ -41,7 +39,6 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
         json jSampleActor = { { "name", "sample_actor" }, { "template", "test_chat.jpg" } };
         Actor hActor = hParser.ConstructActor(jSampleActor);
 
-        REQUIRE_NOTHROW(hActor);
         REQUIRE(hActor.sName == "sample_actor");
         REQUIRE(!hActor.mTemplate.empty());
         REQUIRE(hActor.mMask.empty());
@@ -51,7 +48,6 @@ TEST_CASE("config gets correctly parsed", "[parser]") {
         jSampleActor.push_back({ "mask", "test_chat_mask.jpg" });
         Actor hActorOpt = hParser.ConstructActor(jSampleActor);
 
-        REQUIRE_NOTHROW(hActorOpt);
         REQUIRE(!hActorOpt.mMask.empty());
 
 

@@ -1,4 +1,4 @@
-#include "catch.hpp"
+#include "stdafx.h"
 #include "../Beholder/Core.h"
 
 

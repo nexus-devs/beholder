@@ -15,9 +15,15 @@ TEST_CASE("core gets correctly initialized", "[core]") {
 
     SECTION("window gets found") {
 
-        Core hCore("Example");
+        Core hCore("Example", "AutoIt v3 GUI");
 
-        REQUIRE_NOTHROW(hCore);
+        REQUIRE_NOTHROW(Core("Example"));
         REQUIRE_THROWS_AS(Core("doesnt exist"), std::invalid_argument);
     }   
+
+
+    // Cleanup
+    TerminateProcess(processInfo.hProcess, 0);
+    CloseHandle(processInfo.hProcess);
+    CloseHandle(processInfo.hThread);
 }
